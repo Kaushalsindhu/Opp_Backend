@@ -13,12 +13,13 @@ import User from './models/user.js'
 import userRouter from './routes/user.js'
 import jobRouter from './routes/job.js'
 import companyRouter from './routes/company.js'
-
+import cors from 'cors'
 
 const app = express();
 const port = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+app.use(cors());
 
 // DATABASE SETUP
 // const dbUrl = 'mongodb://127.0.0.1:27017/oppurtunest';
