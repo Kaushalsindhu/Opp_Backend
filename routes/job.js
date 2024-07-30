@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
       const jobs = await Job.find().populate('company');
+      console.log("hello");
       res.json(jobs);
     } catch (error) {
       res.status(500).json({ error: error.message });
